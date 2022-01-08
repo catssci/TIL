@@ -29,11 +29,11 @@
 
   - 분기 전의 Entropy 계산 공식
 
-  ![분기 전의 Entropy 계산 공식](../images/Entropy formula.png)
+    <img src="../images/Entropy formula.png">
 
   - 분기 후의 Entropy 계산 공식
 
-    ![Entropy formula2](../images/Entropy formula2.png)
+    <img src="../images/Entropy formula2.png">
 
   - Entropy 大 : 클래스의 분포가 균등하다.
 
@@ -41,13 +41,13 @@
 
 - Information Gain : 분기 이전의 Entropy와 분기 이후의 Entropy의 차이
 
-  ![Information Gain formula](../images/Information Gain formula.png)
+  <img src="../images/Information Gain formula.png">
 
   - Information Gain 大 : 현재 선택한 분기에서 클래스의 분포가 불균형하다. 잘 분리되었다라고 판단.
 
 - Entropy의 그래프는 다음과 같다.
 
-  ![Entropy graph](../images/Entropy graph.png)
+  <img src="../images/Entropy graph.png">
 
   - 클래스의 분포가 균등하게 나와 각 클래스의 확률이 같다면 $-0.5log_20.5 -0.5log_20.5 = 1$ 로 최댓값을 계산할 수 있다.
   - 반대로 클래스의 분포가 하나의 클래스로만 분류되었다면 $-1log_21 -0log_20 = 0$, $\displaystyle\lim_{x\rightarrow0}xlogx = 0$ 로 최솟값을 계산할 수 있다.
@@ -165,7 +165,7 @@
 
     - Information Gain이 가장 높은 **Outlook**을 선택하고 분기시킨다.
 
-      ![decision tree first split](../images/decision tree first split.png)
+      <img src="../images/decision tree first split.png">
 
       분기된 클래스의 분포를 각 특징에 대해서 비교 했을 때, Overcast의 경우 모두 y로 분리 되어 더 이상 분기를 할 필요없게 되었다.
 
@@ -199,11 +199,13 @@
 
   - 가장 Information Gain을 가지는 Humidity로 분기한다.
 
-    ![decision tree second split](../images/decision tree second split.png)
+    <img src="../images/decision tree second split.png", width="700">
+
+    ​
 
 - Rain을 기준으로 분기했을 때 위와 같이 계산하면 Wind를 선택하게 되고 다음과 같이 Decision Tree를 완성 할 수 있다.
 
-  ![decision tree complete](../images/decision tree complete.png)
+  <img src="../images/decision tree complete.png", width="700">
 
 - 실제 데이터가 다음과 같이 주어졌을 때 어떻게 분류되는지 살펴보자
 
