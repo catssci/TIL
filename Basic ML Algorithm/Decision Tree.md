@@ -1,3 +1,8 @@
+---
+layout: single
+title:  "Decision Tree"
+---
+
 # 1. Decision Tree
 
 - Supervised Learning 알고리즘 중 하나이다.
@@ -117,7 +122,7 @@
       |         | rainy    | 2    | 3    |   5    |
       |         |          |      |      | **14** |
 
-      $E(S, outlook) = \frac{5}{14}*E(3,2) + \frac{4}{14}*E(4,0) + \frac{5}{14}*E(2,3)​$
+      $E(S, outlook) = \frac{5}{14}\times E(3,2) + \frac{4}{14}\times E(4,0) + \frac{5}{14}\times E(2,3)$
 
       ​                           $= \frac{5}{14}[-\frac{3}{5}log(\frac{3}{5})-\frac{2}{5}log(\frac{2}{5})]+ \frac{4}{14}[0] + \frac{5}{14}[\frac{2}{5}log(\frac{2}{5})-\frac{3}{5}log(\frac{3}{5})] = 0.693$
 
@@ -181,9 +186,9 @@
 
     - Temperature
 
-      $E(sunny, Temperature) = \frac{2}{5}*E(0,2) + \frac{2}{5}*E(1,1) + \frac{1}{5}*E(1,0)=\frac{2}{5}=0.4$
+      $E(sunny, Temperature) = \frac{2}{5}\times E(0,2) + \frac{2}{5}\times E(1,1) + \frac{1}{5}\times E(1,0)=\frac{2}{5}=0.4$
 
-      $IG(sunny, Temperature) = 0.971–0.4 =0.571$
+      $IG(sunny, Temperature) = 0.971–0.4 =0.571​$
 
     - Humidity
 
@@ -199,13 +204,13 @@
 
   - 가장 Information Gain을 가지는 Humidity로 분기한다.
 
-    <img src="../images/decision tree second split.png", width="700">
+    <img src="../images/decision tree second split.png">
 
     ​
 
 - Rain을 기준으로 분기했을 때 위와 같이 계산하면 Wind를 선택하게 되고 다음과 같이 Decision Tree를 완성 할 수 있다.
 
-  <img src="../images/decision tree complete.png", width="700">
+  <img src="../images/decision tree complete.png">
 
 - 실제 데이터가 다음과 같이 주어졌을 때 어떻게 분류되는지 살펴보자
 
