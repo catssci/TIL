@@ -65,8 +65,166 @@
   2. Overfitting 발생 확률이 높다.
 
 
-
 # 5. Decision Tree 예제
 
+다음과 같은 데이터 테이블이 있을때, Decision Tree를 만들어 Football을 할 수 있는지 없는지를 예측하는 모델을 만들고자 한다.
 
+| Outlook  | Temperature | Humidity | Wind   | Played Football |
+| -------- | ----------- | -------- | ------ | :-------------: |
+| Sunny    | Hot         | High     | Weak   |        N        |
+| Sunny    | Hot         | High     | Strong |        N        |
+| Overcast | Hot         | High     | Weak   |        Y        |
+| Rain     | Mild        | High     | Weak   |        Y        |
+| Rain     | Cool        | Normal   | Weak   |        Y        |
+| Rain     | Cool        | Normal   | Strong |        N        |
+| Overcast | Cool        | Normal   | Strong |        Y        |
+| Sunny    | Mild        | High     | Weak   |        N        |
+| Sunny    | Cool        | Normal   | Weak   |        Y        |
+| Rain     | Mild        | Normal   | Weak   |        Y        |
+| Sunny    | Mild        | Normal   | Strong |        Y        |
+| Overcast | Mild        | High     | Strong |        Y        |
+| Overcast | Hot         | Normal   | Weak   |        Y        |
+| Rain     | Mild        | High     | Strong |        N        |
 
+첫번째 분기를 다음과 같이 결정한다.
+
+- 분기전 Entropy를 다음과 같이 계산 할 수 있다.
+
+  - 분기전의 클래스 분포는 다음과 같고,
+
+    | Played  Football |      |
+    | ---------------- | ---- |
+    | N                | 5    |
+    | Y                | 9    |
+
+  - 분기전의 Entropy는 다음과 같이 계산 할 수 있다.
+
+    $E(S) = -[(\frac{9}{14})log(\frac{9}{14}) + (\frac{5}{14})log(\frac{5}{14})] = 0.94$
+
+- 분기가 될 후보들은 다음과 같다.
+
+  - **Outlook, Temperature, Humidity, Wind**
+
+  - 각 분기의 클래스의 분포와 Entropy, Information Grain을 다음과 같이 계산 할 수 있다.
+
+    - outlook
+
+      |         |          |      | play |        |
+      | ------- | -------- | ---- | ---- | :----: |
+      |         |          | yes  | no   | total  |
+      |         | sunny    | 3    | 2    |   5    |
+      | outlook | overcast | 4    | 0    |   4    |
+      |         | rainy    | 2    | 3    |   5    |
+      |         |          |      |      | **14** |
+
+      $E(S, outlook) = \frac{5}{14}*E(3,2) + \frac{4}{14}*E(4,0) + \frac{5}{14}*E(2,3)​$
+
+      ​                           $= \frac{5}{14}[-\frac{3}{5}log(\frac{3}{5})-\frac{2}{5}log(\frac{2}{5})]+ \frac{4}{14}[0] + \frac{5}{14}[\frac{2}{5}log(\frac{2}{5})-\frac{3}{5}log(\frac{3}{5})] = 0.693$
+
+      $IG(S, outlook) = 0.94 - 0.693 = 0.247$
+
+    - temperature
+
+      |             |      |      | play |       |
+      | ----------- | ---- | ---- | ---- | :---: |
+      |             |      | yes  | no   | total |
+      |             | Hot  | 2    | 2    |   4   |
+      | Temperature | Mild | 4    | 2    |   6   |
+      |             | Cool | 3    | 1    |   4   |
+      |             |      |      |      |  14   |
+
+      $E(S, Temperature) = 0.911$
+
+      $IG(S, Temperature) = 0.94 - 0.911 = 0.029$
+
+    - humidity
+
+      |          |        |      | play |       |
+      | -------- | ------ | ---- | ---- | :---: |
+      |          |        | yes  | no   | total |
+      |          | High   | 3    | 4    |   7   |
+      | Humidity | Normal | 6    | 1    |   7   |
+      |          |        |      |      |  14   |
+
+      $E(S, Humidity) = 0.788$
+
+      $IG(S, Humidity) = 0.94 - 0.788 = 0.152$
+
+    - wind
+
+      |      |        |      | play |       |
+      | ---- | ------ | ---- | ---- | :---: |
+      |      |        | yes  | no   | total |
+      |      | Strong | 3    | 3    |   6   |
+      | Wind | Weak   | 6    | 2    |   8   |
+      |      |        |      |      |  14   |
+
+      $E(S, Windy) = 0.893$
+
+      $IG(S, Windy) = 0.94 - 0.893 = 0.047$
+
+    - Information Gain이 가장 높은 **Outlook**을 선택하고 분기시킨다.
+
+      ![decision tree first split](../images/decision tree first split.png)
+
+      분기된 클래스의 분포를 각 특징에 대해서 비교 했을 때, Overcast의 경우 모두 y로 분리 되어 더 이상 분기를 할 필요없게 되었다.
+
+      <img src="../images/decision tree first split2.png" width="200">
+
+이제 두번째 분기는 다음과 같이 결정된다.
+
+- Sunny를 기준으로 분기
+
+  - $E(sunny) = [\frac{3}{5}log(3/5)-\frac{2}{5}log(2/5)] = 0.971$
+
+  - 분기 후보는 **Temperature, Humidity, Windy**이다. 각 후보의 Entropy와 Information Gain을 계산하면 다음과 같다.
+
+    - Temperature
+
+      $E(sunny, Temperature) = \frac{2}{5}*E(0,2) + \frac{2}{5}*E(1,1) + \frac{1}{5}*E(1,0)=\frac{2}{5}=0.4$
+
+      $IG(sunny, Temperature) = 0.971–0.4 =0.571$
+
+    - Humidity
+
+      $E(sunny, Humidity)=0$
+
+      $IG(sunny, Humidity) = 0.971-0=0.971$
+
+    - Windy
+
+      $E(sunny, Windy)=0.951$
+
+      $IG(sunny, Windy) = 0.971-0.951=0.020$
+
+  - 가장 Information Gain을 가지는 Humidity로 분기한다.
+
+    ![decision tree second split](../images/decision tree second split.png)
+
+- Rain을 기준으로 분기했을 때 위와 같이 계산하면 Wind를 선택하게 되고 다음과 같이 Decision Tree를 완성 할 수 있다.
+
+  ![decision tree complete](../images/decision tree complete.png)
+
+- 실제 데이터가 다음과 같이 주어졌을 때 어떻게 분류되는지 살펴보자
+
+  - $X_{data}: Outlook = Sunny, Temperature = Cool, Humidity = Normal, Wind = Strong$
+  - **Outlook = Sunny** and **Humidity = Normal**로 풋볼을 하게되는 결과를 얻을 것이다.
+
+- 규칙 추출 (5개의 규칙 생성, 5개의 leaf node)
+
+  1. IF (Outlook = Sunny) and (Humidity = High) THEN Football = No
+  2. IF (Outlook = Sunny) and (Humidity = Normal) THEN Football = Yes
+  3. IF (Outlook = Rain) and (Wind = Strong) THEN Football = No
+  4. IF (Outlook = Rain) and (Wind = Weak) THEN Football = Yes
+  5. IF (Outlook = Overcast) THEN Football = Yes
+
+# 6.Decision Tree의 종류
+
+- ID3 (Iterative Dichotomiser 3)
+  - Entropy와 Information Gain 지표를 사용
+- CART (Classification and Regression Trees)
+  - gini-impurity를 사용
+
+## Reference :
+
+- [Decision Tree Algorithm With Hands-On Example](https://medium.datadriveninvestor.com/decision-tree-algorithm-with-hands-on-example-e6c2afb40d38)
