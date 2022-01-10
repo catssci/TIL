@@ -10,9 +10,9 @@
 1. ~~Gradient Descent~~
 2. ~~Sigmoid~~
 3. ~~Validation 세트, Test 세트~~
-4. Auto Encoder
-5. Dropout
-6. CNN
+4. ~~Auto Encoder~~
+5. ~~Dropout~~
+6. ~~CNN~~
 7. Word2Vec
 8. Adam Optimizer
 9. Batch Normalization
@@ -132,7 +132,111 @@
 
 
 
-# 04. Auto Encoder 
+# 4. Auto Encoder 
+
+### 01. Auto Encoder란?
+
+- 입력과 출력이 같은 뉴럴네트워크 구조의 모델이다. 
+- 구조는 Encoder단과 Decoder단으로 나누어져 부른다. 
+- Encoder단은 뉴런의 수가 줄어드는 방향으로 구성되고, Decoder단은 뉴런의 수가 늘어나는 방향으로 구성되어 최종단에서는 입력뉴런의 수와 같아지게 된다.
+
+### 02. 사용 목적은?
+
+- Dimension Reduction
+
+- Network 가중치 초기화 
+
+  $\rightarrow $ Batch-Norm, Xavier Initialization
+
+  마지막 출력단의 가중치는 random init
+
+### 03. PCA와 차이점은?
+
+- Activation Function 없이 사용하는 AutoEncoder는 PCA와 같은 manifold를 가진다.
+- 일반적인 PCA는 선형적으로 차원을 줄인다. 그러나 AutoEncoder는 비선형으로 차원을 줄일수 있다.
+
+
+
+# 5. Dropout 
+
+### 01. Dropout이란?
+
+- 히든레이어의 일부 뉴런을 일부 동작을 멈춰가면서 모델을 학습시키는 전략
+
+### 02. 효과
+
+- Overfitting 문제를 막기 위해 Regularization 효과를 준다.
+- 여러 개의 모델을 학습하는 효과를 누릴 수 있다.
+
+### 03. 비슷한 Regularization 효과를 주는 방법들은?
+
+- L1 Regularization
+- L2 Regularization
+
+//max-norm regularization
+
+//large decaying learning rates, high momentum
+
+### 04. 유의할점은?
+
+- 테스트 할 때에는 dropout을 끄고 테스트 진행한다. 더 확실한 결과를 얻기 위해!!
+
+
+
+# 6. CNN 
+
+### 01. CNN이란?
+
+- convolution이라는 작업이 들어가는 NN
+
+### 02. 왜 이미지 분야에서 많이 사용하는가?
+
+- local information을 효율적으로 볼 수 있다. (일정 크기의 filter와 convolution 연산을 통해)
+
+### 03. 장점은?
+
+- 파라미터의 감소
+
+### 04. 주어진 CNN과 똑같은 MLP를 만들 수 있나?
+
+- 네 만들수 있습니다. MLP를 구성할때 다음 뉴런의 출력을 계산할 때 이전 레이어의 모든 뉴런과 연결하지 않고 일정 영역의 뉴런만을 연결한 모델을 구성할 수 있다면, Convolution 효과를 똑같이 구성 할 수 있다.
+
+### 05. Pooling의 장점
+
+- 데이터의 사이즈가 줄어들기 때문에 연산에 들어가는 컴퓨팅 연산량이 줄어든다.
+- 데이터의 크기를 줄이면서 소실이 발생하기 때문에, 오버피팅을 방지할 수 있다.
+
+### 06. 풀링시에 만약 Max를 사용한다면 그 이유는?
+
+- Average Pooling : 이미지를 부드럽게 만든다. 
+- Max Pooling : 선명한 특징을 식별하게 한다. 
+- MNIST를 예를 들때, Max Pooling을 사용한다면 흰색 부분을 강조하여 Pooling을 실시한다. 결국 이때에는 숫자 영역에 집중하겠다는 뜻으로 볼 수 있다.
+
+### 06. 시퀀스 데이터에 CNN을 적용하는 것이 가능할까?
+
+- Conv1D를 사용하여 충분히 만들 수 있다.
+- 이때의 Convolution 연산은 1차원으로 움직인다.
+- 또는 시퀀스 데이터를 이미지로 변환하여 사용할 수 있다.
+
+
+
+# 7. Word2Vec 
+
+### 01. Word2Vec이란?
+
+### 02. 원리는?
+
+### 03. 왼쪽 파라메터들을 임베딩으로 쓰는 이유?
+
+### 04. 오른쪽 파라메터들의 의미는 무엇일까?
+
+### 05. 남자와 여자가 가까울까? 남자와 자동차가 가까울까?
+
+### 06. 번역을 Unsupervised로 할 수 있을까?
+
+
+
+
 
 
 
