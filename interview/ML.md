@@ -14,8 +14,8 @@
 5. ~~Dropout~~
 6. ~~CNN~~
 7. ~~Word2Vec~~
-8. Adam Optimizer
-9. Batch Normalization
+8. ~~Adam Optimizer~~
+9. ~~Batch Normalization~~
 10. CycleGAN
 
 - reference : [보이저 엑스 개발자 질문 리스트](https://v6xcareer.notion.site/v6xcareer/500ba3f2fc1448be904ca0f9347ae50f)
@@ -225,6 +225,7 @@
 
 
 
+
 # 7. Word2Vec 
 
 ### 01. Word2Vec이란?
@@ -278,13 +279,79 @@
 
 
 
-# 8. Adam Optimizer
 
-### 
+# 8. Optimizer 발전 과정 (SGD, RMSprop, Adam)
+
+### 01. SGD
+
+- 경사 하강법과 다르게 한번 학습할 때 모든 데이터에 대해 가중치를 조절하는 것이 아니라, 램덤하게 추출한 일부 데이터에 대해 가중치를 조절한다.
+
+### 02. SGD에서 Stochastic의 의미는?
+
+- 전체를 한번에 계산하지 않고 확률적으로 일부 샘플을 구해서 조금씩 나눠서 계산하겠다는 뜻이다.
+
+### 03. 미니배치를 작게 할때의 장단점은?
+
+- batch size가 작아지면 한번에 계산하는 데이터의 양이 작아져 다소 부정확한 gradient를 계산하게 된다. 따라서 각 단계별 계산량은 줄어들지만 학습 시간이 오래 걸리게 된다.
+
+### 04. 모멘텀의 수식을 적어 본다면?
+
+- momentum rate * 이전 업데이트 - learning rate * 현재 gradient
+- V(1) = -learning rate * 현재 gradient, V(2) = m * V(1) - learning rate * 현재 gradient, V(3) = m * V(2) - learning rate * 현재 gradient
+
+### 05. RMSprop
+
+- 학습 할수록 learning rate를 줄여 나가면서 최적화하는 알고리즘인 Adagrad의 수정 버전이다.
+- Adagrad에서는 현재부터 이전까지의 gradient 제곱 합만큼 learning rate를 줄여나가다 보니 learning rate가 너무 작아지는 문제가 발생하여 이를 해결하기 위해 RMSprop를 만들었다.
+- 지수이동평균 적용을 적용하여 과거일수록 gradient를 적게 반영하여 learning rate가 0으로 수렴하는 것을 방지하였다. 
+- 즉, learning rate에  v_t = decay factor * v_t-1 + (1 - decay factor) * 현재 gradient
+
+### 06. Adam
+
+- RMSprop와 momentum을 합친 최적화 알고리즘이다.
+- 즉, learning rate를 decay하면서 이전  gradient 정보들을 기억하여 업데이트에 반영하는 모멘텀을 동시에 업데이트한다.
+
+![optimizer](https://t1.daumcdn.net/cfile/tistory/9906BE3D5A3A642E06)
 
 
 
+# 9. Batch Normalization
 
+### 01. Batch Normalization의 동작은?
+
+- 네트워크 사이의 데이터 분포를 변화시키기 위한 layer를 추가한다.
+- 이때 입력 레이어의 출력에 평균, 분산을 구하고 normalization 한다. 그 후 beta, lambda 변수를 추가하여 scale과 shift 연산을 추가한다.
+- 즉, 이전 레이어의 mini-batch 데이터에서 평균과 분산을 구하고 평균이 0, 분산이 1인 데이터 분포를 만들고, lambda를 곱하여 scale를 조정한다. 그리고 beta를 더하여 shift 해준다.
+
+### 02. 효과는?
+
+- Covariate Shift (현재 layer의 입력 분포가 바뀌어 버리는 현상)을 해결
+- Overfitting 문제 완화
+
+### 03. Dropout의 효과는?
+
+- Overfitting 문제를 막기 위해 Regularization 효과를 준다.
+- 여러 개의 모델을 학습하는 효과를 누릴 수 있다.
+
+### 04. BN 적용해서 학습 이후 실제 사용시에 주의할 점은? 코드로는?
+
+- 학습시 batch별 평균, 분산을 저장하고 beta와 lambda를 학습한 다음, 테스트에서는 batch별 평균과 분산에서의 이동 평균 또는 지수 평균을 사용하여 고정하고, beta와 lambda를 이용하여 적용한다.
+
+### 05. GAN에서 Generator 쪽에도 BN을 적용해도 될까?
+
+- discriminator의 input과 generator output에 batch norm을 적용하는 것은  피해야 한다. 더 자세히 공부할것....
+
+### 06. Whitening은 왜 사용하면 안되는가?
+
+- Whitening은 입력 데이터의 표준편차를 1로 평균을 0으로 만드는 정규화방법이다.
+- 만약 z = wx + b라는 결과를 출력하는 네트워크에서 whitening을 사용하면 z에 E(z)를 빼주는 작업을 진행 할 것이다. 이때 bias인 b값은 없어지게 되고 b의 영향이 사라지게 된다. 즉, 학습이 가능한 파라미터를 무시해버린다. (z - E(z) = wx + b - wE(x) - b = wx - wE(x))
+- 또한 다음 레이어에서 활성화 함수로 sigmoid를 사용하게 된다면 비선형성의 특징을 사라지게 만든다. (sigmoid는 [-2, 2] 구간에서 선형성을 가진다.)
+
+
+
+# 10. CycleGAN
+
+### 01. CycleGAN이란?
 
 
 
