@@ -34,9 +34,34 @@
 
 
 
-
-
 # 2. Attention
+
+### 01. 배경
+
+- Seq2Seq의 문제점을 해결하기 위해서 나왔다.
+- 즉, 고정된 크기의 벡터로 압축하는 방식에 문제가 있었다.
+  - 정보 손실
+  - Vanishing gradient
+
+### 02. Attention이란?
+
+- 출력단어를 예측할때 인코더 부분에서의 정보를 같이 본다. 이때 가중치를 두어 연관이 높으면 높은 가중치, 낮으면 낮은 가중치를 둔다.
+
+### 03. 학습 방법
+
+- Seq2Seq에서는 디코더 출력을 위해 입력하는 변수로 이전 시점의 은닉층과 이전 시점의 출력을 입력받았다. Attention을 사용하면 여기에 추가로 Attention Value를 받는다.
+- Attention Value 얻기
+  - 인코더에서의 은닉 벡터 $h_i$와 디코더에서의 은닉 벡터 $s_t$를 내적하여 하나의 실수 형태로 바꾸고, softmax를 사용하여 Attention 분포로 변환한다.
+  - Attention 분포와 각 인코더의 은닉벡터를 곱하고 합하여 Attention Value를 얻는다. (인코더의 차원과 동일)
+- 디코더에서의 은닉 벡터 $s_t$와 Attention Value $a_t$를 결합한다.
+- tanh(w*v_t) = new s_t를 계산!
+- ​
+
+
+
+
+
+
 
 # 3. Transformer
 
