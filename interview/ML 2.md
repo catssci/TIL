@@ -55,6 +55,31 @@
   - Attention 분포와 각 인코더의 은닉벡터를 곱하고 합하여 Attention Value를 얻는다. (인코더의 차원과 동일)
 - 디코더에서의 은닉 벡터 $s_t$와 Attention Value $a_t$를 결합한다.
 - tanh(w*v_t) = new s_t를 계산!
+- new s_t는 다음 시점의 입력으로 다시 사용!
+
+### 04. Attention Value
+
+- Attention Value를 계산하는 다양한 방법 존재
+- 위에서는 Dot Product 방법을 사용하여 소개한다.
+
+
+
+# 3. Transformer
+
+### 01. Transformer란? 
+
+- 인코더-디코더 구성을 따르면서, Attention만을 이용하여 구성한 모델이다.
+
+### 02. 왜 나왔나?
+
+- Attention이 나왔을 때와 같이 고정된 크기의 벡터로 압축을 하면서 1. 정보 손실, 2. Vanishing gradient 문제가 나왔다.
+- 이를 해결하기 위해 Attention을 사용하였고, RNN구조에서 이를 바꿔 Attention만을 이용해보자는 아이디어에서 나왔다.
+
+### 03. Positional Encoding
+
+- 기존의 RNN 모델의 장점은 단어의 위치 정보를 같이 학습할 수 있다는 것이었다.
+- 그러나 Transformer에서는 RNN 모델을 사용하지 않기 때문에 위치 정보를 같이 추가 할 수 있는 방법을 강구해왔고, 그 방법이 Positional Encoding이다.
+- 단어의 Embedding 결과에서 Positional Encoding을 더한 벡터를 입력으로 사용한다.
 - ​
 
 
@@ -63,7 +88,7 @@
 
 
 
-# 3. Transformer
+
 
 # 4. Collaborative filtering
 
