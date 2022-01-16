@@ -217,13 +217,53 @@
 
 ### 01. Few-Shot Learning이란?
 
-- ​
+- 적은 데이터도 잘 분류할 수 있는 학습 방법
+- 이 말이 적은 데이터로 학습한다는 의미는 아니다!
+- Training Set에 없는 클래스를 맞추는 문제!!!!
+
+### 02. Supervised Learning과 차이
+
+- Supervised : test image가 training image에 있음. 즉, 학습에 강아지 사진을 주고 강아지를 잘 학습했는지 묻는다.
+- Few-Shot : test image가 training image에 없음. 즉, 학습에 다른 사진들을 주고 학습 데이터에 없는 고양이를 맞출수 있는지 묻는다.
+
+### 03. Training, Support, Query Set
+
+- Training Set : 학습에 사용하는 데이터
+- Support Set : 학습 데이터에는 없는 클래스의 데이터로 테스트할 때 도움 주는 데이터
+  - k-way : 클래스의 개수
+  - n-shot : 각 클래스가 가진 sample의 개수
+  - k-way가 커지면 모델의 정확도 $\downarrow$ , n-shot이 커지면 모델 정확도 $\uparrow$
+- Query Set : 테스트 데이터, k-way와 클래스 수가 같다.
+
+### 04. 학습 방법
+
+- 목표 : 우리의 모델은 많은 training set을 통해 각 사진별로 중요한 특징들을 잘 추출해서 “같다”와 “다르다”를 학습한다.
+
+- 데이터 셋 구성
+
+  ![img](https://imgur.com/I9tue49.png)
+
+- Feature Extraction을 학습할 수 있는 모델 구성
+
+  ![img](https://imgur.com/MNocafS.png)
+
+- Siamese Network 사용
+
+  ![img](https://imgur.com/8LhUkIz.png)
+
+- 학습 진행 : Positive, Negative pair를 번갈아가면서 학습
+
+![img](https://imgur.com/NRaWGIg.png)![img](https://imgur.com/zIzp2mA.png)
+
+### 05. 예측
+
+- Support set의 이미지의 representation과 Query image의 representation 간의 차이를 샴 네트워크를 이용해 유사도를 계산할 수 있다.
+
+  ![img](https://imgur.com/Ov15qUe.png)
 
 
 
-
-
-
+- [출처](https://zzaebok.github.io/machine_learning/FSL/)
 
 
 
