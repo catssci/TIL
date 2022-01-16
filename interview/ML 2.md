@@ -64,6 +64,7 @@
 
 
 
+
 # 3. Transformer
 
 ### 01. Transformer란? 
@@ -80,11 +81,91 @@
 - 기존의 RNN 모델의 장점은 단어의 위치 정보를 같이 학습할 수 있다는 것이었다.
 - 그러나 Transformer에서는 RNN 모델을 사용하지 않기 때문에 위치 정보를 같이 추가 할 수 있는 방법을 강구해왔고, 그 방법이 Positional Encoding이다.
 - 단어의 Embedding 결과에서 Positional Encoding을 더한 벡터를 입력으로 사용한다.
-- ​
+- 더 자세한 설명 : [Positional Encoding](https://skyjwoo.tistory.com/entry/positional-encoding%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80)
 
+### 04. Encoder 
 
+- 크게 두 네트워크로 이루어져 있다.
+  - Self Attention
+  - Feed Forward Neural Network
+- 그리고 각 네트워크 출력에서 Add & Norm 과정이 포함되어 있다. (총 2개)
 
+### 05. Self Attention
 
+- 현재 문장 안에서 각 단어들 사이의 관계가 얼마나 연관있는지 Attention 방법을 통하여 추출한다.
+
+- 현재 단어 임베딩 벡터 $x_i$를 Self Attention을 통해 $z_i$로 변환한다.
+
+   	1. Query, Key, Value 벡터를 생성한다.
+   	2. 현재 Query와 각 단어의 Key 벡터의 내적과 key 벡터 크기의 루트 값으로 나누어 Score 벡터를 계산한다.
+   	3. Softmax를 취하고 Value 벡터들을 곱한다.
+   	4. 그리고 합하여 최종 벡터 $z_i$를 출력한다.
+   	5. 위 과정을 모든 단어 시점마다 반복한다.
+
+- 위 과정은 행렬로 표현함으로써 한번에 계산할 수 있다.
+
+  - $W_q, W_k, W_v$ : word num * 출력 z 로 표현
+
+  ![img](https://nlpinkorean.github.io/images/transformer/self-attention-matrix-calculation-2.png)
+
+- 위의 과정을 n번 반복하여 서로 다른 z행렬을 n개 만들고 합쳐서 W_0 행렬을 곱하여 최종 Z 행렬을 구한다.
+
+![img](https://nlpinkorean.github.io/images/transformer/transformer_multi-headed_self-attention-recap.png)
+
+### 06. Position-wise FFNN
+
+- 하나의 히든 레이어를 가지는 Fully Connected NN
+
+- 히든 레이어의 출력의 활성화 함수를 ReLU 사용
+
+  ![img](https://wikidocs.net/images/page/31379/positionwiseffnn.PNG)
+
+- 이때 $W_1, b_1, W_2, b_2$는 같은 인코더 층에서는 공유하지만 다른 층과는 다르다.!
+
+### 07. Add & Norm
+
+- Residual Connection
+
+  - 멀티 헤드 어텐션의 입력(X)과 멀티 헤드 어텐션의 결과(Z)가 더해지는 과정
+  - X+Z
+
+- Layer Normalization
+
+  - 각 단어 행의 평균과 분산을 구하여 정규화 한다.
+
+  ![img](https://wikidocs.net/images/page/31379/layer_norm_new_2_final.PNG)
+
+### 08. Decoder
+
+- 크게 세 네트워크로 이루어져 있다.
+  - Self Attention & look-ahead mask
+  - 인코더-디코더 어텐션
+  - Feed Forward Neural Network
+- 그리고 각 네트워크 출력에서 Add & Norm 과정이 포함되어 있다. (총 3개)
+
+### 09. Self Attention and Look Ahead Mask
+
+- 목적 : 현재 시점의 예측에서 현재 시점보다 미래에 있는 단어들을 참고하지 못하도록 하기 위한 방법
+- 즉, Attention Score 행렬을 계산 할 때 Mask 를 씌워 미래 단어를 참고하지 못하도록 만든다.![img](https://wikidocs.net/images/page/31379/decoder_attention_score_matrix.PNG)        $\rightarrow$       ![img](https://wikidocs.net/images/page/31379/%EB%A3%A9%EC%96%B4%ED%97%A4%EB%93%9C%EB%A7%88%EC%8A%A4%ED%81%AC.PNG)
+- 이를 제외하고는 Encoder의 Self Attention 과 같다.
+
+### 10. 인코더-디코더 어텐션
+
+- Query는 디코더의 행렬, Key, Value는 인코더에서 마지막 행렬을 가져온다.
+
+![img](https://wikidocs.net/images/page/31379/%EB%94%94%EC%BD%94%EB%8D%94%EB%91%90%EB%B2%88%EC%A7%B8%EC%84%9C%EB%B8%8C%EC%B8%B5%EC%9D%98%EC%96%B4%ED%85%90%EC%85%98%EC%8A%A4%EC%BD%94%EC%96%B4%ED%96%89%EB%A0%AC_final.PNG)
+
+- 이후의 과정은 Self Attention과 같다.
+
+### 11. Feed Forward Neural Network 
+
+- 인코더에서의 FFNN과 같다.
+
+### 12. 주의점
+
+- Encoder과 Decoder의 층은 똑같이 구현한다.
+- 각 Decoder 층에 Encoder의 출력을 모두 입력해준다.
+- 출력은 어떻게 하는거지???
 
 
 
