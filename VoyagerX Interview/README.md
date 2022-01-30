@@ -6,9 +6,9 @@
 
 # 면접 질문 리스트
 
-- Gradient Descent란?
-- Sigmoid의 단점은?
-- Validation 세트, Test 세트의 각각의 역할은?
+- Gradient Descent란?[설명](../VoigerX Interview/01. Gradient Descent.md)
+- Sigmoid의 단점은?[설명](../VoigerX Interview/02. sigmoid.md)
+- Validation 세트, Test 세트의 각각의 역할은?[설명]()
 - Auto Encoder란?
 - Dropout의 효과는?
 - CNN의 장점은?
