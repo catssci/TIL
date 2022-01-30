@@ -6,10 +6,10 @@
 
 # 면접 질문 리스트
 
-- Gradient Descent란?[설명](../VoigerX Interview/01. Gradient Descent.md)
-- Sigmoid의 단점은?[설명](../VoigerX Interview/02. sigmoid.md)
-- Validation 세트, Test 세트의 각각의 역할은?[설명]()
-- Auto Encoder란?
+- Gradient Descent란?[설명](https://github.com/catssci/TIL/blob/main/VoyagerX%20Interview/01.%20Gradient%20Descent.md)
+- Sigmoid의 단점은?[설명](https://github.com/catssci/TIL/blob/main/VoyagerX%20Interview/02.%20sigmoid.md)
+- Validation 세트, Test 세트의 각각의 역할은?[설명](https://github.com/catssci/TIL/blob/main/VoyagerX%20Interview/03.%20Validation%2C%20Test%20Split.md)
+- Auto Encoder란?[설명](https://github.com/catssci/TIL/blob/main/VoyagerX%20Interview/04.%20Auto%20Encoder.md)
 - Dropout의 효과는?
 - CNN의 장점은?
 - Word2Vec의 원리는?
