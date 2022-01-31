@@ -10,7 +10,7 @@
 - Sigmoid의 단점은?[설명](https://github.com/catssci/TIL/blob/main/VoyagerX%20Interview/02.%20sigmoid.md)
 - Validation 세트, Test 세트의 각각의 역할은?[설명](https://github.com/catssci/TIL/blob/main/VoyagerX%20Interview/03.%20Validation%2C%20Test%20Split.md)
 - Auto Encoder란?[설명](https://github.com/catssci/TIL/blob/main/VoyagerX%20Interview/04.%20Auto%20Encoder.md)
-- Dropout의 효과는?
+- Dropout의 효과는?[설명](https://github.com/catssci/TIL/blob/main/VoyagerX%20Interview/05.%20Dropout.md)
 - CNN의 장점은?
 - Word2Vec의 원리는?
 - Adam Optimizer의 동작은?
