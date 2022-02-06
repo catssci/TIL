@@ -15,23 +15,19 @@
 
 # 공모전 데이터
 
-```
-+-- data
-	+-- train
-	
-```
-
-
-
 ```bash
-├── data
-│   ├── train
-│   ├── test
-│   └── validation
-├── code
-│   ├── train.py
-│   ├── classify.py
-│   ├── model.py
-│   └── dataset.py
-└── run.sh
+├── train.csv
+├── example_test.csv
+├── example_sample_submission.csv
+└── ubiquant
+    ├── __init__.py
+    └── competition.cpython-37m-x86_64-linux-gnu.so
 ```
+- train.csv
+  - `row_id` : 각 행을 나타내는 인덱스 id
+  - `time_id` : 데이터가 수집된 시간에 대한 id code, 시간 사이의 값이 일정하지 않는다. 테스트 데이터에서는 훈련 데이터보다 짧아질 것으로 예상된다.
+  - `investment_id` : 투자 id code, 모든 투자가 모든 시간 Id를 가지는 것이 아니다?
+  - `target` : target
+  - `f_0 ~ f_299` : 암호화된 시장 데이터
+- example_test.csv
+- example_sample_submission.csv
