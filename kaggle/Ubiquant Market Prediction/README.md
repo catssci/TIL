@@ -15,3 +15,23 @@
 
 # 공모전 데이터
 
+```
++-- data
+	+-- train
+	
+```
+
+
+
+```bash
+├── data
+│   ├── train
+│   ├── test
+│   └── validation
+├── code
+│   ├── train.py
+│   ├── classify.py
+│   ├── model.py
+│   └── dataset.py
+└── run.sh
+```
