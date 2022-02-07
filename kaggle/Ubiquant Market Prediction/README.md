@@ -31,3 +31,10 @@
   - `f_0 ~ f_299` : 암호화된 시장 데이터
 - example_test.csv
 - example_sample_submission.csv
+
+
+
+# 참고 노트북
+
+- [🛒 Ubiquant - Exploration+Baseline w\ SHAP🛒](https://www.kaggle.com/utcarshagrawal/ubiquant-exploration-baseline-w-shap)
+- ​
