@@ -33,8 +33,14 @@
 - example_sample_submission.csv
 
 
+# 정리
+- [BaseLine](https://github.com/catssci/TIL/blob/main/kaggle/Ubiquant_Market_Prediction/baseline.ipynb)
+    - 속도와 저장 공간을 절약한 데이터 불러오기
+    - 각 피쳐별 분포, 상관관계 EDA
+- [BaseModel](https://github.com/catssci/TIL/blob/main/kaggle/Ubiquant_Market_Prediction/base-model.ipynb)
+    - lightgbm 모델을 사용한 model
+    - **valid rmse: 0.897498, Public Score: 0.110**
 
 # 참고 노트북
 
 - [🛒 Ubiquant - Exploration+Baseline w\ SHAP🛒](https://www.kaggle.com/utcarshagrawal/ubiquant-exploration-baseline-w-shap)
-- ​
