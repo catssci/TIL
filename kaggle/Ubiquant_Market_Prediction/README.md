@@ -44,3 +44,4 @@
 # 참고 노트북
 
 - [🛒 Ubiquant - Exploration+Baseline w\ SHAP🛒](https://www.kaggle.com/utcarshagrawal/ubiquant-exploration-baseline-w-shap)
+- [⏫ Fast Data Loading and Low Mem with Parquet Files](https://www.kaggle.com/robikscube/fast-data-loading-and-low-mem-with-parquet-files)
