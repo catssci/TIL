@@ -50,3 +50,4 @@
 
 - [🛒 Ubiquant - Exploration+Baseline w\ SHAP🛒](https://www.kaggle.com/utcarshagrawal/ubiquant-exploration-baseline-w-shap)
 - [⏫ Fast Data Loading and Low Mem with Parquet Files](https://www.kaggle.com/robikscube/fast-data-loading-and-low-mem-with-parquet-files)
+- [👀✔WhyonlyKeras? Easy Pytorch Competitive DNN 💖](https://www.kaggle.com/sahil112/whyonlykeras-easy-pytorch-competitive-dnn)
