@@ -34,6 +34,11 @@
 
 
 # 정리
+- [Fast Data from parquet](https://github.com/catssci/TIL/blob/main/kaggle/Ubiquant_Market_Prediction/fast-data-loading-from-parquet.ipynb)
+    - parquet file data format 데이터 설명 (속도 및 메모리 최적화, 데이터 type)
+    - train data Loading 속도 비교, `investment_id`별 데이터 Load 방법, 특정 열 Load 방법 정리
+    - size 비교: 18GB >> 5.5GB >> **3.63GB**
+    - time 비교: crash >> 56s >> **36s**
 - [BaseLine](https://github.com/catssci/TIL/blob/main/kaggle/Ubiquant_Market_Prediction/baseline.ipynb)
     - 속도와 저장 공간을 절약한 데이터 불러오기
     - 각 피쳐별 분포, 상관관계 EDA
