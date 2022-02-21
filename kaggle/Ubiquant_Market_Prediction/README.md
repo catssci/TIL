@@ -39,12 +39,17 @@
     - train data Loading 속도 비교, `investment_id`별 데이터 Load 방법, 특정 열 Load 방법 정리
     - size 비교: 18GB >> 5.5GB >> **3.63GB**
     - time 비교: crash >> 56s >> **36s**
+- [Understand on competition using sklearn Linear Regression]()
+    - sklearn의 Linear Regression을 이용한 대회 이해 목적의 노트북
 - [BaseLine](https://github.com/catssci/TIL/blob/main/kaggle/Ubiquant_Market_Prediction/baseline.ipynb)
     - 속도와 저장 공간을 절약한 데이터 불러오기
     - 각 피쳐별 분포, 상관관계 EDA
 - [BaseModel](https://github.com/catssci/TIL/blob/main/kaggle/Ubiquant_Market_Prediction/base-model.ipynb)
     - lightgbm 모델을 사용한 model
     - **valid rmse: 0.897498, Public Score: 0.110**
+- [simple dnn model using Pytorch]()
+    - pytorch를 이용한 간단 dnn 모델
+    - **valid rmse: --, Public Score: --**
 
 # 참고 노트북
 
