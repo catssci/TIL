@@ -19,3 +19,7 @@
 ## 수학
 
 ## CS
+
+# 실전
+
+## [Kaggle](https://github.com/catssci/TIL/tree/main/kaggle)
