@@ -22,4 +22,4 @@
 
 # 실전
 
-## [Kaggle](https://github.com/catssci/TIL/tree/main/kaggle)
+- [Kaggle](https://github.com/catssci/TIL/tree/main/kaggle)
