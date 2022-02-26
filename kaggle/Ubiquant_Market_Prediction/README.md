@@ -41,6 +41,9 @@
     - time 비교: crash >> 56s >> **36s**
 - [Understand on competition using sklearn Linear Regression](https://github.com/catssci/TIL/blob/main/kaggle/Ubiquant_Market_Prediction/linear-regression-using-sklearn.ipynb)
     - sklearn의 Linear Regression을 이용한 대회 이해 목적의 노트북
+    - train data 더 작게 수정 (RAM이 모자름)
+    - Score 계산은 예측 결과와 정답 결과의 `Pearson correlation coefficient` 로 계산
+    - **Public Score: 0.108**
 - [BaseLine](https://github.com/catssci/TIL/blob/main/kaggle/Ubiquant_Market_Prediction/baseline.ipynb)
     - 속도와 저장 공간을 절약한 데이터 불러오기
     - 각 피쳐별 분포, 상관관계 EDA
