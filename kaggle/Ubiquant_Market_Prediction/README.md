@@ -1,6 +1,6 @@
 # 캐글 공모전
 
-- 공모전 이름: Ubiquant Market Prediction
+- 공모전 이름: [Ubiquant Market Prediction](https://www.kaggle.com/c/ubiquant-market-prediction)
 - 기간: 2022.01.19 ~ 2022.04.12
 
 
