@@ -53,9 +53,16 @@
 - [simple dnn model using Pytorch]()
     - pytorch를 이용한 간단 dnn 모델
     - **valid rmse: --, Public Score: --**
+- [fastai-baseline](https://github.com/catssci/TIL/blob/main/kaggle/Ubiquant_Market_Prediction/fastai-model.ipynb)
+    - fastai 라이브러리를 사용하여 모델 학습
+    - **Public Score: 0.130**
+- [xgboost regression]()
+    - 
 
 # 참고 노트북
 
 - [🛒 Ubiquant - Exploration+Baseline w\ SHAP🛒](https://www.kaggle.com/utcarshagrawal/ubiquant-exploration-baseline-w-shap)
 - [⏫ Fast Data Loading and Low Mem with Parquet Files](https://www.kaggle.com/robikscube/fast-data-loading-and-low-mem-with-parquet-files)
 - [👀✔WhyonlyKeras? Easy Pytorch Competitive DNN 💖](https://www.kaggle.com/sahil112/whyonlykeras-easy-pytorch-competitive-dnn)
+- [Ubiquant - fastai baseline](https://www.kaggle.com/danielkorth/ubiquant-fastai-baseline)
+- [XGBoost-3](https://www.kaggle.com/mostafaibrahim17/xgboost-3/notebook)
