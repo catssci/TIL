@@ -57,7 +57,8 @@
     - fastai 라이브러리를 사용하여 모델 학습
     - **Public Score: 0.130**
 - [xgboost regression]()
-    - 
+    - xgboost를 사용
+    - **Public Score: ---**
 
 # 참고 노트북
 
