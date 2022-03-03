@@ -66,7 +66,7 @@ Loss Function을 다음과 같이 정의한다.
 4. 파라미터 $\theta$를 업데이트한다. ($\theta := \theta - \lambda*gradient$)
 5. 1 ~ 4 단계를 반복
 
-[구현]()
+[구현](https://github.com/catssci/TIL/blob/main/Basic%20ML%20Algorithm/Linear%20Regression.ipynb)
 
 ### Normal Equation
 
