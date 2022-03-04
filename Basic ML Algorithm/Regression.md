@@ -30,11 +30,11 @@ Regression model은 하나 이상의 **독립 변수**와 **종속 변수** 사�
 
 1. **Linear Regression**
 2. **Ridge Regression**
-3. **Neural Network Regression **
-4. **Lasso Regression **
-5. **Decision Tree Regression **
+3. **Neural Network Regression**
+4. **Lasso Regression**
+5. **Decision Tree Regression**
 6. **Random Forest**
-7. **KNN Model **
+7. **KNN Model**
 8. **Support Vector Machines (SVM)**
 9. **Gausian Regression**
 10. **Polynomial Regression**
@@ -70,9 +70,15 @@ Loss Function을 다음과 같이 정의한다.
 
 ### Normal Equation
 
+Linear Regression은 closed form solution이 존재한다. 그래서 다음과 같은 방법으로 최적 파라미터를 계산할 수 있다.
 
+![NormalEquation](../images/NormalEquation.png)
 
+- Loss Function MSE의 gradient를 구하고, 0으로 수렴하는 $\theta$를 구한다.
 
+[구현](https://github.com/catssci/TIL/blob/main/Basic%20ML%20Algorithm/Linear%20Regression.ipynb)
+
+## 02. Ridge Regression
 
 
 
@@ -90,3 +96,4 @@ Loss Function을 다음과 같이 정의한다.
 
 1. https://www.imsl.com/blog/what-is-regression-model
 2. [10 Popular Regression Algorithms In Machine Learning Of 2022](https://www.jigsawacademy.com/popular-regression-algorithms-ml/#Support-Vector-Machines-(SVM))
+3. [Normal Equation in Python: The Closed-Form Solution for Linear Regression](https://towardsdatascience.com/normal-equation-in-python-the-closed-form-solution-for-linear-regression-13df33f9ad71)
