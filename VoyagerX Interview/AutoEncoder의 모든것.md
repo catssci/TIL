@@ -1,11 +1,36 @@
-오토인코더의 모든것 강의를 보고 정리하는 문서이다.
+# 오토인코더의 모든 것
 
-# 오토인코더의 키워드
+- 오토인코더의 모든것 강의를 보고 정리하는 문서
+- Link: [오토인코더의 모든 것](https://d2.naver.com/news/0956269)
 
-- Unsupervised Learning $\rightarrow$ 학습 방법
-- Nonlinear Dimensionality Reduction (~ **Manifold Learning**) $\rightarrow$ 인코더 네트워크
-- Generative Model Learning $\rightarrow$ 디코더 네트워크
-- Maximum Likelihood Density Estimation (VAE) $\rightarrow$ Loss가 Negative ML로 해석됨
+# 강의 목표
+
+- Chapter 1. Revisit Deep Neural Networks
+  - Deep Learning의 기본 지식 돌아보기
+  - Loss Function의 2가지 해석 방법 (Back-Propagation, **Maximum Likelihood**)
+
+
+# AE의 4가지 Keyword
+
+1. Unsupervised Learning $\rightarrow$ 학습 방법
+2. Nonlinear Dimensionality Reduction (~ **Manifold Learning**) $\rightarrow$ 인코더 네트워크
+3. Generative Model Learning $\rightarrow$ 디코더 네트워크
+4. Maximum Likelihood Density Estimation (VAE) $\rightarrow$ Loss가 Negative ML로 해석됨
+
+# Machine Learning Problem (Classic)
+
+1. Collect training data
+2. Define function
+   - 모델 종류
+   - Loss Function
+3. Learning / Training
+   - 주어진 데이터를 제일 잘 설명하는 모델 찾기, 최적 파라미터 찾기
+4. Predicting / Testing
+   - 고정 입력 $\rightarrow$ 고정 출력
+
+
+
+
 
 
 
