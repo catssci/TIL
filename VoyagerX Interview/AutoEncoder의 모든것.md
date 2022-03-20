@@ -68,3 +68,26 @@
 
    - 고정 입력 $\rightarrow$ 고정 출력
 
+
+# Loss Function의 2가지 관점으로 해석하기
+
+### View Point 1. Back-Propagation
+
+- MSE Loss 와 CE Loss 를 Back-Propagation의 관점으로 비교한다면 다음과 같다.
+- MSE Loss
+  - output layer의 출력: $a, a = \sigma(z), z = \displaystyle \sum_i{w_i*x_i}+b$ 라 한다면 다음과 같이 그레디언트를 구할 수 있다.
+  - $C = \displaystyle \frac{(a- y)^2}{2}$
+  - $\displaystyle \frac{\partial C}{\partial a} = (a - y),  \ \ \frac{\partial C}{\partial z}=\frac{\partial C}{\partial a}*\frac{\partial a}{\partial z} = (a - y)*(1 - \sigma(z))*\sigma(z) = (a - y)*(1 - a)*a$
+  - $\displaystyle \frac{\partial C}{\partial w} =  \frac{\partial C}{\partial a} *  \frac{\partial a}{\partial z}*  \frac{\partial z}{\partial w} = (a-y)*(1-a)*a*x$
+  - $\displaystyle \frac{\partial C}{\partial b} =  \frac{\partial C}{\partial a} *  \frac{\partial a}{\partial z}*  \frac{\partial z}{\partial b} = (a-y)*(1-a)*a$
+  - **(1-a)*a**는 activation function의 미분값이다. 이때 a는 w,b에 의해 결정되고, sigmoid의 경우 미분값의 최댓값이 0.25이고 일정 범위를 벗어나면 급격히 작아져 계산되는 그레디언트 결과도 작아진다. 결국 activation function 선택으로 gradient vanishing 문제가 발생할 수 있고, 초기 w, b의 선택으로 a의 값이 0.5와 멀어지는 경우 학습 속도가 굉장히 작아지게 된다.
+- CE Loss
+  - output layer의 출력: $a, a = \sigma(z), z = \displaystyle \sum_i{w_i*x_i}+b$ 라 한다면 다음과 같이 그레디언트를 구할 수 있다.
+  - $C = -[y * ln(a) + (1-y)*ln(1 - a)]$
+  - $\displaystyle \frac{\partial C}{\partial a} = \frac{a-y}{(1-a)*a},  \ \ \frac{\partial C}{\partial z}=\frac{\partial C}{\partial a}*\frac{\partial a}{\partial z} = \frac{a-y}{(1-a)*a}*(1 - \sigma(z))*\sigma(z) = \frac{a-y}{(1-a)*a}*(1 - a)*a = a-y$
+  - $\displaystyle \frac{\partial C}{\partial w} =  \frac{\partial C}{\partial a} *  \frac{\partial a}{\partial z}*  \frac{\partial z}{\partial w} = (a-y)*x$
+  - $\displaystyle \frac{\partial C}{\partial b} =  \frac{\partial C}{\partial a} *  \frac{\partial a}{\partial z}*  \frac{\partial z}{\partial b} = (a-y)$
+  - CE Loss를 사용한 출력 레이어에서는 activation function의 미분값이 곱해지지 않으며 (sigmoid 경우), 이때문에 gradient vanishing 문제에 강건할 수 있다. 그러나 여러 레이어가 쌓이고 그에 따른 activation function을 사용한다면 마찬가지로 gradient vanishing 문제가 발생할 가능성이 있다.
+- 결론: Back-Propagation의 관점에서 본다면 CE Loss 사용이 더 좋은 경향을 보인다.
+
+### View Point 2. Maximum Likelihood
