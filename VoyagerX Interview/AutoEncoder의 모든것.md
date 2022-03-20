@@ -91,3 +91,8 @@
 - 결론: Back-Propagation의 관점에서 본다면 CE Loss 사용이 더 좋은 경향을 보인다.
 
 ### View Point 2. Maximum Likelihood
+
+- 네트워크 출력을 **정해진 확률분포에서 출력이 나올 확률** 이라고 해석한다. 확률 분포를 선택하고 출력 $f_{\theta}(x)$는 확률분포의 파라미터로 해석이 가능해진다.
+- 그럼 결국 $p(y\mid f_{\theta}(x))$에서 likelihood가 최대가 되는 $f_{\theta}$를 찾는 것으로 해석된다. (likelihood가 최대 일때 = $f_{\theta}(x) = y$)
+- 확률 분포 모델을 찾는 것으로 생각하면 Sampling을 할 수 있고, 그러면 고정 입력을 통해 다른 출력 값을 가지게 될 수 있다.
+- ​
