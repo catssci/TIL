@@ -93,6 +93,42 @@
 ### View Point 2. Maximum Likelihood
 
 - 네트워크 출력을 **정해진 확률분포에서 출력이 나올 확률** 이라고 해석한다. 확률 분포를 선택하고 출력 $f_{\theta}(x)$는 확률분포의 파라미터로 해석이 가능해진다.
+
 - 그럼 결국 $p(y\mid f_{\theta}(x))$에서 likelihood가 최대가 되는 $f_{\theta}$를 찾는 것으로 해석된다. (likelihood가 최대 일때 = $f_{\theta}(x) = y$)
+
 - 확률 분포 모델을 찾는 것으로 생각하면 Sampling을 할 수 있고, 그러면 고정 입력을 통해 다른 출력 값을 가지게 될 수 있다.
-- ​
+
+- Loss Function의 2가지 조건을 만족하는 지 확인
+
+  - I.I.d Condition on $p(y\mid f_{\theta}(x))$
+
+    - Assumption 1. Independence
+
+      $p(y\mid f_{\theta}(x)) = \prod_i p_{D_i}(y\mid f_{\theta}(x_i))$
+
+      모든 데이터가 독립이다.
+
+    - Assumption 2. Identical Distribution
+
+      $p(y\mid f_{\theta}(x)) = \prod_i p(y\mid f_{\theta}(x_i))$
+
+      모든 데이터는 같은 확률 분포에서 나왔다.
+
+  - 제안하는 Loss Function : $-log(p(y\mid f_{\theta}(x))) = -\sum_i log(p(y_i \mid f_{\theta}(x_i)))$
+
+  - Loss Function의 2가지 조건 확인 (Back-Propagation을 사용하기 위한)
+
+    - Assumption 1. 학습 데이터의 모든 로스는 각 샘플의 로스들의 합으로 나와야한다.
+    - Assumption 2. 로스는 네트워크의 출력과 정답 레이블만을 가지고 한다. 중간 레이어의 출력을 이용하여 로스를 구하면 안된다.
+
+- 네트워크의 출력 분포를 다음 2가지로 정의하여 정리하면 MSE, CE Loss와 동일한 결과를 얻는다.
+
+  - Gaussian distribution = MSE
+
+
+  - Bernoulli distribution = CE
+
+- 요약
+
+  ![MLSummary](../images/MLSummary.png)
+
