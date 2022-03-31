@@ -19,4 +19,6 @@
 
 - [Interview_Question_for_Beginner](https://github.com/JaeYeopHan/Interview_Question_for_Beginner)
 - [READY FOR TECH INTERVIEW](https://github.com/WooVictory/Ready-For-Tech-Interview)
+- https://gyoogle.dev/blog/computer-science/data-structure/Array.html
+
 
