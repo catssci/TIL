@@ -8,8 +8,8 @@
 
 # 공부 범위 keyword
 
-- 컴퓨터 구조
-- 자료구조
+- [컴퓨터 구조](https://github.com/catssci/TIL/blob/main/Line%20%ED%95%84%EA%B8%B0%20%EC%A4%80%EB%B9%84/02.%20%EC%BB%B4%ED%93%A8%ED%84%B0%20%EA%B5%AC%EC%A1%B0.md)
+- [자료구조](https://github.com/catssci/TIL/blob/main/Line%20%ED%95%84%EA%B8%B0%20%EC%A4%80%EB%B9%84/03.%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.md)
 - 운영체제
 - 데이터베이스
 - 네트워크
