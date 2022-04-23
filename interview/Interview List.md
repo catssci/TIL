@@ -13,7 +13,7 @@
 2. 해당 프로젝트에서 참여 역할
 3. 프로젝트의 사용 기술
 4. 해당 기술을 사용한 이유
-  4-1. 꼬리 질문
+     4-1. 꼬리 질문
 5. 전 직장 퇴사 이유
 
 ### 직무
@@ -35,3 +35,19 @@
 2. 지원서 질문
 3. 회사에서 하고 싶은 역할
 4. 특정 상황에 대한 플로우 제시
+
+
+
+# 2022.04 면접 피드백
+
+1. Entropy, Cross Entropy
+   - Decision Tree, Classification Loss
+2. SVM의 커널 함수
+   - 커널 트릭
+   - hyper-plan
+3. GAN
+   - Batch-Normalization
+   - Generator, Discriminator
+4. 볼츠만머신
+   - Network
+5. 기본 CS 문제 확인
