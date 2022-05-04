@@ -4,7 +4,7 @@
 - kakao
   - [2022 카카오 신입 공채 1차 온라인 코딩테스트](https://tech.kakao.com/2022/01/14/2022-kakao-recruitment-round-1/)
   - [2021 Dev-Matching: 웹 백엔드 개발자(하반기)](https://programmers.co.kr/learn/challenges)
-  - [2021 카카오 인턴십 for Tech developers](https://programmers.co.kr/learn/challenges)
+  - [2021 카카오 인턴십 for Tech developers](https://programmers.co.kr/learn/challenges):smiley:	
 
 # 백준 참고 문제집
 - [문제집: 단기간 성장](https://www.acmicpc.net/workbook/view/4349)
