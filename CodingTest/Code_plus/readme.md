@@ -1,4 +1,4 @@
-# 1. [코딩 테스트 준비 - 기초](https://code.plus/course/51)
+# [1. 코딩 테스트 준비 - 기초](https://code.plus/course/51)
 ## 수학
 ## 브루트 포스
 ## 다이나믹 프로그래밍
