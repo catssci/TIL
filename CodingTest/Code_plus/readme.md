@@ -8,4 +8,5 @@
 - [13913: 숨바꼭질 4](https://www.acmicpc.net/problem/13913) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/BFS/13913.ipynb)
 - [14226: 이모티콘](https://www.acmicpc.net/problem/14226) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/BFS/14226.ipynb)
 - [13549: 숨바꼭질 3](https://www.acmicpc.net/problem/13549) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/BFS/13649.ipynb)
+- [1261: 알고스팟](https://www.acmicpc.net/problem/1261) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/BFS/1261.ipynb)
 ## 시뮬레이션과 구현
