@@ -3,6 +3,7 @@
 ## 수학
 - [10430: 나머지](https://www.acmicpc.net/problem/10430) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-%20%EA%B8%B0%EC%B4%88/%EC%88%98%ED%95%99/10430.ipynb)
 - [4375: 1](https://www.acmicpc.net/problem/4375) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-%20%EA%B8%B0%EC%B4%88/%EC%88%98%ED%95%99/4375.ipynb)
+- [1037: 약수](https://www.acmicpc.net/problem/1037) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-%20%EA%B8%B0%EC%B4%88/%EC%88%98%ED%95%99/1037.ipynb)
 ## 브루트 포스
 ## 다이나믹 프로그래밍
 ## 그래프
