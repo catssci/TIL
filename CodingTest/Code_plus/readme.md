@@ -9,6 +9,7 @@
 - [2609: 최대공약수와 최소공배수](https://www.acmicpc.net/problem/2609) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-%20%EA%B8%B0%EC%B4%88/%EC%88%98%ED%95%99/2609.ipynb)
 - [1978: 소수 찾기](https://www.acmicpc.net/problem/1978) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-%20%EA%B8%B0%EC%B4%88/%EC%88%98%ED%95%99/1978.ipynb)
 - [1929: 소수 구하기](https://www.acmicpc.net/problem/1929) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-%20%EA%B8%B0%EC%B4%88/%EC%88%98%ED%95%99/1929.ipynb)
+- [6588: 골드바흐의 추측](https://www.acmicpc.net/problem/6588) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-%20%EA%B8%B0%EC%B4%88/%EC%88%98%ED%95%99/6588.ipynb)
 ## 브루트 포스
 ## 다이나믹 프로그래밍
 ## 그래프
