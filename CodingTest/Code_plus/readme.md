@@ -14,6 +14,7 @@
 - [2309: 일곱난쟁이](https://www.acmicpc.net/problem/2309) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-%20%EA%B8%B0%EC%B4%88/%EB%B8%8C%EB%A3%A8%ED%8A%B8%20%ED%8F%AC%EC%8A%A4/2309.ipynb)
 - 
 ## 다이나믹 프로그래밍
+- [1463: 1로 만들기](https://www.acmicpc.net/problem/1463) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-%20%EA%B8%B0%EC%B4%88/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/1463.ipynb)
 - [11052: 카드 구매하기](https://www.acmicpc.net/problem/11052) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-%20%EA%B8%B0%EC%B4%88/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/11052.ipynb)
 - [16194: 카드 구매하기 2](https://www.acmicpc.net/problem/16194) / [code](https://github.com/catssci/TIL/blob/main/CodingTest/Code_plus/%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EC%A4%80%EB%B9%84%20-%20%EA%B8%B0%EC%B4%88/%EB%8B%A4%EC%9D%B4%EB%82%98%EB%AF%B9%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/16194.ipynb)
 ## 그래프
