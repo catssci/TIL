@@ -10,3 +10,4 @@
 - [code.plus](https://www.acmicpc.net/workbook/codeplus)
 - [문제집: 단기간 성장](https://www.acmicpc.net/workbook/view/4349)
 - [문제집: DFS+BFS 필수 문제](https://www.acmicpc.net/workbook/view/1983)
+- [최소 신장 트리](https://www.acmicpc.net/step/15)
