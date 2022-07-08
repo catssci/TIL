@@ -2,7 +2,7 @@
 - Today I Learned
 - 오늘 하루 배운 것들을 여기에 정리하자
 - 정리 후 재배치하자
-  - github blog
+  - ~github blog~
   - 다른 repository
 
 
