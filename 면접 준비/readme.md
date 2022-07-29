@@ -14,6 +14,13 @@
 - 지원 동기
 - 회사 기여
 ### CS 지식
+- 자료구조
+  - [ ] Array / Linked List
+  - [ ] Queue / Stack
+  - [ ] Hash Table / BST
+- OS
+- DB
+- 네트워크
 ### 기본 통계 / 수학 지식
 - 베이지안 정리
 - PCA / LDA
