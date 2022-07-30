@@ -19,6 +19,8 @@
   - [ ] Queue / Stack
   - [ ] Hash Table / BST
 - OS
+  - [ ] Process / Thread
+  - [ ] Memory
 - DB
 - 네트워크
 ### 기본 통계 / 수학 지식
