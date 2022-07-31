@@ -31,9 +31,12 @@
 - p-value
 - r-squared
 - 정규화 / 표준화
+- A / B Test
+- Linear Regression / Logistic Regression
 ### 기본 ML 지식
 - k-means
 - decision tree
+- Logistic Regression
 - isolation forest
 - SVM
 - k-fold cross validation
@@ -41,12 +44,15 @@
 - boting / boosting
 - sampling
 - Entropy / Cross Entropy
+- MCMC
+- Xgboosting / GBDT
 ### 기본 DL 지식
 - DNN
 - CNN
 - RNN
 - optimizer
 - GAN
+- Word2Vec
 - Transformer / BERT
 - Overfitting
 - batch normalization
