@@ -33,7 +33,9 @@
 - 정규화 / 표준화
 - A / B Test
 - Linear Regression / Logistic Regression
+- 상관계수 / 공분산
 ### 기본 ML 지식
+- 나이브 베이지안
 - k-means
 - decision tree
 - Logistic Regression
@@ -43,7 +45,7 @@
 - 앙상블
 - boting / boosting
 - sampling
-- Entropy / Cross Entropy
+- Entropy / Cross Entropy / KL-divergence
 - MCMC
 - Xgboosting / GBDT
 ### 기본 DL 지식
