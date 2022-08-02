@@ -24,7 +24,7 @@
 - DB
 - 네트워크
 ### 기본 통계 / 수학 지식
-- 베이지안 정리
+- 베이즈 정리
 - PCA / LDA
 - eigenvalue, eigenvector
 - 기본 분포
