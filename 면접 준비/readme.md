@@ -62,5 +62,7 @@
 - Loss Function (MSE, Cross Entropy)
 ### 프로젝트 수행 이력
 - 대학원 실적
+  - k-means 이상 탐지
 - 회사 실적
+  - 나이브베이지안 모델을 통한 이상 원인 탐지
 - 공모전 이력
