@@ -22,7 +22,13 @@
   - [ ] Process / Thread
   - [ ] Memory
 - DB
+  - [ ] RDB vs NoSQL
+  - [ ] Transaction
+  - [ ] Index
 - 네트워크
+  - [ ] TCP / IP
+  - [ ] HTTP
+  - [ ] 쿠키 / 세션
 ### 기본 통계 / 수학 지식
 - 베이즈 정리
 - PCA / LDA
