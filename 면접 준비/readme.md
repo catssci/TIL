@@ -49,7 +49,7 @@
 - SVM
 - k-fold cross validation
 - 앙상블
-- boting / boosting
+- boting / boosting / bagging
 - sampling
 - Entropy / Cross Entropy / KL-divergence
 - MCMC
@@ -58,6 +58,7 @@
 - DNN
 - CNN
 - RNN
+- LSTM
 - optimizer
 - GAN
 - Word2Vec
